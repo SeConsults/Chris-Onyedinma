@@ -11,10 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170327220130) do
+ActiveRecord::Schema.define(version: 20170327230241) do
 
-# Could not dump table "lectures" because of following NoMethodError
-#   undefined method `[]' for nil:NilClass
+  create_table "lectures", force: :cascade do |t|
+    t.string "title"
+    t.text   "description"
+  end
 
   create_table "vlabs", force: :cascade do |t|
     t.string "title"
